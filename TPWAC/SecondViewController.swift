@@ -10,10 +10,10 @@ import UIKit
 //Class that handles the student view
 class SecondViewController: UIView {
     //outlet collection that holds all of the drop-down buttons
-    @IBOutlet var Select: [UIButton]!
+    @IBOutlet var selection: [UIButton]!
     //handleSelect method to drop down the actual menu
     @IBAction func handleSelect(_ sender: UIButton) {
-        Select.forEach { (button) in
+        selection.forEach { (button) in
             UIView.animate(withDuration: 0.3) {
                 button.isHidden = !button.isHidden
             }

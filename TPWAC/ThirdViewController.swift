@@ -12,8 +12,7 @@ class ThirdViewController: UIView {
     //outlet collection that holds all of the drop-down buttons
     @IBOutlet var selection: [UIButton]!
     //handleSelect action that drops the menu down
-    @IBAction func handleSelect(_ sender:
-        UIButton) {
+    @IBAction func handleSelect(_ sender: UIButton) {
             selection.forEach { (button) in
                     UIView.animate(withDuration: 0.3) {
                         button.isHidden = !button.isHidden
