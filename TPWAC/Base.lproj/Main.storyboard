@@ -87,6 +87,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Z2L-d9-H74">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gb-5H-4Iu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Mob-JO-tTb" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OgE-Mm-FKt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -96,9 +97,31 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K2f-6v-BXS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7gb-5H-4Iu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1549" y="80"/>
+        </scene>
+        <!--Create Activites-->
+        <scene sceneID="dcu-H7-ER8">
+            <objects>
+                <viewController id="vCu-Cd-IyH" customClass="createActivites" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HHQ-2s-cQ6" customClass="createActivities" customModule="TPWAC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-pR-V0t">
+                                <rect key="frame" x="44" y="767" width="46" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ObL-eL-nnT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ux0-n4-88X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CN9-91-hXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="829" y="-577"/>
         </scene>
         <!--Student View Controller-->
         <scene sceneID="Dok-M5-9xQ">
@@ -237,7 +260,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-Hd-7Vb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVC-Am-QL9">
                                         <rect key="frame" x="20" y="0.0" width="374" height="50"/>
@@ -306,6 +329,7 @@
                                         </state>
                                         <connections>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="CUH-gE-iWl"/>
+                                            <segue destination="vCu-Cd-IyH" kind="show" id="Wk2-5k-Mg3"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3C-dX-zQV">
@@ -460,8 +484,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sT1-1p-m0x"/>
-        <segue reference="IUy-8f-h6p"/>
+        <segue reference="4ay-Tm-cgr"/>
+        <segue reference="BWz-Cs-5GT"/>
         <segue reference="K2f-6v-BXS"/>
     </inferredMetricsTieBreakers>
 </document>
