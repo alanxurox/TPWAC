@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03315776AA99CDE9ECF8C718 /* libPods-TPWAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D6D1826223D361D8553FF /* libPods-TPWAC.a */; };
+		2DFC735C23E0BFCB008C02FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC735B23E0BFCB008C02FA /* Podfile */; };
+		2DFC736223E0C3C5008C02FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC736123E0C3C5008C02FA /* GoogleService-Info.plist */; };
+		2DFC736423E0C443008C02FA /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC736323E0C443008C02FA /* credentials.plist */; };
 		ED0114B623DB7CCA00C08FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0114B523DB7CCA00C08FFB /* AppDelegate.swift */; };
 		ED0114B823DB7CCA00C08FFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0114B723DB7CCA00C08FFB /* SceneDelegate.swift */; };
 		ED0114BA23DB7CCA00C08FFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0114B923DB7CCA00C08FFB /* ViewController.swift */; };
@@ -20,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172D6D1826223D361D8553FF /* libPods-TPWAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPWAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DFC735B23E0BFCB008C02FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2DFC736123E0C3C5008C02FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DFC736323E0C443008C02FA /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		6CD2694783358A8ABC5B7DB6 /* Pods-TPWAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPWAC.release.xcconfig"; path = "Pods/Target Support Files/Pods-TPWAC/Pods-TPWAC.release.xcconfig"; sourceTree = "<group>"; };
+		CD93382C4095CEE87DC12149 /* Pods-TPWAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TPWAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TPWAC/Pods-TPWAC.debug.xcconfig"; sourceTree = "<group>"; };
 		ED0114B223DB7CCA00C08FFB /* TPWAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPWAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0114B523DB7CCA00C08FFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED0114B723DB7CCA00C08FFB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03315776AA99CDE9ECF8C718 /* libPods-TPWAC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35D64B4DFB6435904D68076A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CD93382C4095CEE87DC12149 /* Pods-TPWAC.debug.xcconfig */,
+				6CD2694783358A8ABC5B7DB6 /* Pods-TPWAC.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		506624569C49B507C7E3D34A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				172D6D1826223D361D8553FF /* libPods-TPWAC.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ED0114A923DB7CCA00C08FFB = {
 			isa = PBXGroup;
 			children = (
+				2DFC735B23E0BFCB008C02FA /* Podfile */,
 				ED0114B423DB7CCA00C08FFB /* TPWAC */,
 				ED0114B323DB7CCA00C08FFB /* Products */,
+				35D64B4DFB6435904D68076A /* Pods */,
+				506624569C49B507C7E3D34A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +106,8 @@
 				ED0114BE23DB7CCB00C08FFB /* Assets.xcassets */,
 				ED0114C023DB7CCB00C08FFB /* LaunchScreen.storyboard */,
 				ED0114C323DB7CCB00C08FFB /* Info.plist */,
+				2DFC736123E0C3C5008C02FA /* GoogleService-Info.plist */,
+				2DFC736323E0C443008C02FA /* credentials.plist */,
 			);
 			path = TPWAC;
 			sourceTree = "<group>";
@@ -86,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED0114C623DB7CCB00C08FFB /* Build configuration list for PBXNativeTarget "TPWAC" */;
 			buildPhases = (
+				887FDC6F9239F2FFE194E294 /* [CP] Check Pods Manifest.lock */,
 				ED0114AE23DB7CCA00C08FFB /* Sources */,
 				ED0114AF23DB7CCA00C08FFB /* Frameworks */,
 				ED0114B023DB7CCA00C08FFB /* Resources */,
+				9B28C1DB784C1182370CCDD1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,12 +173,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0114C223DB7CCB00C08FFB /* LaunchScreen.storyboard in Resources */,
+				2DFC736423E0C443008C02FA /* credentials.plist in Resources */,
 				ED0114BF23DB7CCB00C08FFB /* Assets.xcassets in Resources */,
+				2DFC736223E0C3C5008C02FA /* GoogleService-Info.plist in Resources */,
+				2DFC735C23E0BFCB008C02FA /* Podfile in Resources */,
 				ED0114BD23DB7CCA00C08FFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		887FDC6F9239F2FFE194E294 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TPWAC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B28C1DB784C1182370CCDD1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TPWAC/Pods-TPWAC-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TPWAC/Pods-TPWAC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED0114AE23DB7CCA00C08FFB /* Sources */ = {
@@ -298,6 +375,7 @@
 		};
 		ED0114C723DB7CCB00C08FFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD93382C4095CEE87DC12149 /* Pods-TPWAC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -316,6 +394,7 @@
 		};
 		ED0114C823DB7CCB00C08FFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD2694783358A8ABC5B7DB6 /* Pods-TPWAC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
