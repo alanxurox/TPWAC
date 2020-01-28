@@ -11,13 +11,12 @@ import GoogleSignIn
 import Firebase
 
 var userID : String = "null"
-var idToken : String = "disconnected"
-var fullName : String = "disconnected"
-var givenName : String = "disconnected"
-var familyName : String = "disconnected"
-var email : String = "disconnected"
-
-var logged = false
+var idToken : String = "null"
+var fullName : String = "null"
+var givenName : String = "null"
+var familyName : String = "null"
+var email : String = "null"
+var status : String = "Disconnected"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -67,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
       givenName = user.profile.givenName
       familyName = user.profile.familyName
       email = user.profile.email
-        logged = true
+      status = "Logged in"
       // ...
         
     }
@@ -76,8 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
               withError error: Error!) {
       // Perform any operations when the user disconnects from app here.
       // ...
-        email = "disconnected"
-        logged = false
+        status = "Disconnected"
     }
 
 }

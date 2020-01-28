@@ -26,19 +26,22 @@ class ViewController: UIViewController {
 
 
     @IBAction func update(_ sender: UIButton) {
-        if (userID != "null"){
+        if (status != "Disconnected"){
             ref.child("users").child(userID).setValue([
                 "email": email,
                 "User ID": userID,
                 "ID Token": idToken,
                 "Full Name": fullName,
                 "Given Name": givenName,
-                "Family Name": familyName])
+                "Family Name": familyName,
+                "Status": status])
             /*ref.child("users").child(userID).setValue(["User ID": userID])
             ref.child("users").child(userID).setValue(["ID Token": idToken])
             ref.child("users").child(userID).setValue(["Full Name": fullName])
             ref.child("users").child(userID).setValue(["Given Name": givenName])
             ref.child("users").child(userID).setValue(["Family Name": familyName])*/
+        }else{
+            ref.child("users").child(userID).setValue(["Status": status])
         }
     }
     
