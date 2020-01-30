@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func update(_ sender: UIButton) {
-        if (status != "Disconnected"){
+        /*if (status != "Disconnected"){
             ref.child("users").child(userID).setValue([
                 "email": email,
                 "User ID": userID,
@@ -35,14 +35,19 @@ class ViewController: UIViewController {
                 "Given Name": givenName,
                 "Family Name": familyName,
                 "Status": status])
-            /*ref.child("users").child(userID).setValue(["User ID": userID])
+            ref.child("users").child(userID).setValue(["User ID": userID])
             ref.child("users").child(userID).setValue(["ID Token": idToken])
             ref.child("users").child(userID).setValue(["Full Name": fullName])
             ref.child("users").child(userID).setValue(["Given Name": givenName])
-            ref.child("users").child(userID).setValue(["Family Name": familyName])*/
+            ref.child("users").child(userID).setValue(["Family Name": familyName])
         }else{
             ref.child("users").child(userID).setValue(["Status": status])
         }
+        if (currentUser.isFaculty){
+            ref.child("Faculties").child(currentUser.getUserID()).setValue(currentUser)
+        }else{
+            ref.child("Students").child(currentUser.getUserID()).setValue(currentUser)
+        }*/
     }
     
     @IBAction func disconnect(_ sender: UIButton) {

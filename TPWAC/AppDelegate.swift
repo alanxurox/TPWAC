@@ -10,13 +10,15 @@ import UIKit
 import GoogleSignIn
 import Firebase
 
-var userID : String = "null"
+/*var userID : String = "null"
 var idToken : String = "null"
 var fullName : String = "null"
 var givenName : String = "null"
 var familyName : String = "null"
 var email : String = "null"
-var status : String = "Disconnected"
+var status : String = "Disconnected"*/
+
+var currentUser : Student = Student()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -60,22 +62,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         return
       }
       // Perform any operations on signed in user here.
-      userID = user.userID                  // For client-side use only!
-      idToken = user.authentication.idToken // Safe to send to the server
-      fullName = user.profile.name
-      givenName = user.profile.givenName
-      familyName = user.profile.familyName
-      email = user.profile.email
-      status = "Logged in"
-      // ...
-        
+        currentUser.setUserID(userID: user.userID)
+        currentUser.setIDToken(idToken: user.authentication.idToken)
+        currentUser.setFullName(fullName: user.profile.name)
+        currentUser.setGivenName(givenName: user.profile.givenName)
+        currentUser.setFamilyName(familyName: user.profile.familyName)
+        currentUser.setEmail(email: user.profile.email)
+        currentUser.setStatus(status: "Active")
+        currentUser.setFaculty(isFaculty: false) // TBD
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
       // Perform any operations when the user disconnects from app here.
       // ...
-        status = "Disconnected"
+        currentUser.setStatus(status: "Inactive")
     }
 
 }

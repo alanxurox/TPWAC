@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03315776AA99CDE9ECF8C718 /* libPods-TPWAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172D6D1826223D361D8553FF /* libPods-TPWAC.a */; };
+		2D694C0F23E35765005C2D5B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D694C0E23E35765005C2D5B /* Student.swift */; };
+		2D694C1123E35777005C2D5B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D694C1023E35777005C2D5B /* Activity.swift */; };
 		2DFC735C23E0BFCB008C02FA /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC735B23E0BFCB008C02FA /* Podfile */; };
 		2DFC736223E0C3C5008C02FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC736123E0C3C5008C02FA /* GoogleService-Info.plist */; };
 		2DFC736423E0C443008C02FA /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DFC736323E0C443008C02FA /* credentials.plist */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		172D6D1826223D361D8553FF /* libPods-TPWAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TPWAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D694C0E23E35765005C2D5B /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		2D694C1023E35777005C2D5B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		2DFC735B23E0BFCB008C02FA /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2DFC736123E0C3C5008C02FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DFC736323E0C443008C02FA /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED0114B523DB7CCA00C08FFB /* AppDelegate.swift */,
+				2D694C0E23E35765005C2D5B /* Student.swift */,
+				2D694C1023E35777005C2D5B /* Activity.swift */,
 				ED0114B723DB7CCA00C08FFB /* SceneDelegate.swift */,
 				ED0114B923DB7CCA00C08FFB /* ViewController.swift */,
 				ED0114BB23DB7CCA00C08FFB /* Main.storyboard */,
@@ -233,7 +239,9 @@
 				EDB1A34423DF8789005DB659 /* ThirdViewController.swift in Sources */,
 				ED0114B623DB7CCA00C08FFB /* AppDelegate.swift in Sources */,
 				EDB1A34823DF90E4005DB659 /* StudentsInMyActivitiesViewController.swift in Sources */,
+				2D694C1123E35777005C2D5B /* Activity.swift in Sources */,
 				ED0114B823DB7CCA00C08FFB /* SceneDelegate.swift in Sources */,
+				2D694C0F23E35765005C2D5B /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
