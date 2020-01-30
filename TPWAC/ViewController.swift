@@ -18,16 +18,43 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        //GIDSignIn.sharedInstance()?.presentingViewController = self
+        //GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         // Do any additional setup after loading the view.
         
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+    }
+    
 
     @IBAction func update(_ sender: UIButton) {
         if (status != "Disconnected"){
-            ref.child("users").child(userID).setValue([
+            if(true==true/*codes to detects if the account is not teacher's*/){
+                ref.child("Students").child(userID).setValue([
+                "Email": email,
+                "User ID": userID,
+                "ID Token": idToken,
+                "Full Name": fullName,
+                "Given Name": givenName,
+                "Family Name": familyName,
+                "Status": status])
+            }else{
+                ref.child("Teachers").child(userID).setValue([
+                "Email": email,
+                "User ID": userID,
+                "ID Token": idToken,
+                "Full Name": fullName,
+                "Given Name": givenName,
+                "Family Name": familyName,
+                "Status": status])
+            }
+            
+                
+                
+                /*.setValue([
                 "email": email,
                 "User ID": userID,
                 "ID Token": idToken,
@@ -35,19 +62,26 @@ class ViewController: UIViewController {
                 "Given Name": givenName,
                 "Family Name": familyName,
                 "Status": status])
+ */
             /*ref.child("users").child(userID).setValue(["User ID": userID])
             ref.child("users").child(userID).setValue(["ID Token": idToken])
             ref.child("users").child(userID).setValue(["Full Name": fullName])
             ref.child("users").child(userID).setValue(["Given Name": givenName])
             ref.child("users").child(userID).setValue(["Family Name": familyName])*/
-        }else{
-            ref.child("users").child(userID).setValue(["Status": status])
         }
     }
     
     @IBAction func disconnect(_ sender: UIButton) {
+        if(true==true/*codes to detects if the account is not teacher's*/){
+            ref.child("Students").child(userID).setValue(["User ID": userID])
+            
+        }else{
+            ref.child("Faculties").child(userID).setValue(["User ID": userID])
+        }
         GIDSignIn.sharedInstance()?.disconnect()
         GIDSignIn.sharedInstance()?.signOut()
+        
+        
     }
 }
 

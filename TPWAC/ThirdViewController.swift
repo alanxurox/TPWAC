@@ -13,11 +13,16 @@ class ThirdViewController: UIView {
     @IBOutlet var selection: [UIButton]!
     //handleSelect action that drops the menu down
     @IBAction func handleSelect(_ sender: UIButton) {
+        if(true == true /*code to detect if is teacher*/){
             selection.forEach { (button) in
                     UIView.animate(withDuration: 0.3) {
                         button.isHidden = !button.isHidden
                     }
             }
+        }else{
+            /*show specific buttons*/
+        }
+            
         }
     
     /*
