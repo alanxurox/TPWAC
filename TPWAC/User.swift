@@ -1,5 +1,5 @@
 //
-//  Student.swift
+//  User.swift
 //  TPWAC
 //
 //  Created by Jiayang (James) Wang on 1/30/20.
@@ -8,15 +8,19 @@
 
 import Foundation
 
-class Student{
-        var userID : String
-        var idToken : String
-        var fullName : String
-        var givenName : String
-        var familyName : String
-        var email : String
-        var status : String
-        var isFaculty : Bool
+class User{
+    
+    var userID : String
+    var idToken : String
+    var fullName : String
+    var givenName : String
+    var familyName : String
+    var email : String
+    var status : String
+    var isFaculty : Bool
+    
+    var facultyList : [String] = ["vmetcalf@trinitypawling.org",
+                                  "jwang@trinitypawling.org"]
     
     public func logout(){
         self.status = "Inactive"
@@ -42,6 +46,14 @@ class Student{
         self.email = email
         self.status = status
         self.isFaculty = isFaculty
+    }
+    
+    public func checkFaculty(){
+        for i in facultyList{
+            if (self.getEmail() == i){
+                self.isFaculty = true
+            }
+        }
     }
     
     public func setUserID(userID : String){

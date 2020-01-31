@@ -18,7 +18,7 @@ var familyName : String = "null"
 var email : String = "null"
 var status : String = "Disconnected"*/
 
-var currentUser : Student = Student()
+var currentUser : User = User()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -69,7 +69,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         currentUser.setFamilyName(familyName: user.profile.familyName)
         currentUser.setEmail(email: user.profile.email)
         currentUser.setStatus(status: "Active")
-        currentUser.setFaculty(isFaculty: false) // TBD
+        currentUser.checkFaculty()
+        //currentUser.setFaculty(isFaculty: false) // TBD
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
