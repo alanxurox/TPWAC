@@ -26,23 +26,22 @@ class ViewController: UIViewController {
 
 
     @IBAction func update(_ sender: UIButton) {
-        if (status != "Disconnected"){
-            ref.child("users").child(userID).setValue([
-                "email": email,
-                "User ID": userID,
-                "ID Token": idToken,
-                "Full Name": fullName,
-                "Given Name": givenName,
-                "Family Name": familyName,
-                "Status": status])
-            /*ref.child("users").child(userID).setValue(["User ID": userID])
-            ref.child("users").child(userID).setValue(["ID Token": idToken])
-            ref.child("users").child(userID).setValue(["Full Name": fullName])
-            ref.child("users").child(userID).setValue(["Given Name": givenName])
-            ref.child("users").child(userID).setValue(["Family Name": familyName])*/
+
+        var group : String
+        
+        if (currentUser.isFaculty){
+            group = "Faculties"
         }else{
-            ref.child("users").child(userID).setValue(["Status": status])
+            group = "Students"
         }
+        ref.child(group).child(currentUser.getUserID()).setValue([
+            "email": currentUser.getEmail(),
+            "User ID": currentUser.getUserID(),
+            "ID Token": currentUser.getIDToken(),
+            "Full Name": currentUser.getFullName(),
+            "Given Name": currentUser.getGivenName(),
+            "Family Name": currentUser.getFamilyName(),
+            "Status": currentUser.getStatus()])
     }
     
     @IBAction func disconnect(_ sender: UIButton) {
