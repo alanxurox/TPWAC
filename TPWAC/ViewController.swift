@@ -18,8 +18,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //var activity = Activity()
+        //activity.setDate(year: 2020, month: 2, day: 2, hour: 20, minute: 20)
+        
         GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        
         // Do any additional setup after loading the view.
         
     }
