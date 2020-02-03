@@ -232,6 +232,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IIT-FN-xlh"/>
                         <connections>
+                            <outlet property="helloMessage" destination="T4T-Q4-ep7" id="6nH-7E-Ecb"/>
                             <outletCollection property="selection" destination="gKw-D0-ZaS" collectionClass="NSMutableArray" id="8JM-cM-3HT"/>
                             <outletCollection property="selection" destination="8yl-GO-WIU" collectionClass="NSMutableArray" id="MM0-F3-8r0"/>
                             <outletCollection property="selection" destination="bFl-No-1VJ" collectionClass="NSMutableArray" id="vH0-8i-pCM"/>
