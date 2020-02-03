@@ -24,7 +24,7 @@ class ThirdViewController: UIView {
             /*show specific buttons*/
         }
         }
-    
+      //d
     
     
     
