@@ -37,7 +37,7 @@ class User{
         isFaculty = false
     }
     
-    init(userID : String, idToken : String, fullName : String, givenName : String, familyName : String, email : String, status : String, isFaculty : Bool){
+    init(userID: String, idToken: String, fullName: String, givenName: String, familyName: String, email: String, status: String, isFaculty: Bool){
         self.userID = userID
         self.idToken = idToken
         self.fullName = fullName
@@ -56,7 +56,7 @@ class User{
         }
     }
     
-    public func setUserID(userID : String){
+    public func setUserID(userID: String){
         self.userID = userID
     }
     
@@ -64,7 +64,7 @@ class User{
         return userID
     }
     
-    public func setIDToken(idToken : String){
+    public func setIDToken(idToken: String){
         self.idToken = idToken
     }
     
@@ -72,7 +72,7 @@ class User{
         return idToken
     }
     
-    public func setFullName(fullName : String){
+    public func setFullName(fullName: String){
         self.fullName = fullName
     }
     
@@ -80,7 +80,7 @@ class User{
         return fullName
     }
     
-    public func setGivenName(givenName : String){
+    public func setGivenName(givenName: String){
         self.givenName = givenName
     }
     
@@ -88,7 +88,7 @@ class User{
         return givenName
     }
     
-    public func setFamilyName(familyName : String){
+    public func setFamilyName(familyName: String){
         self.familyName = familyName
     }
     
@@ -96,7 +96,7 @@ class User{
         return familyName
     }
     
-    public func setEmail(email : String){
+    public func setEmail(email: String){
         self.email = email
     }
     
@@ -104,7 +104,7 @@ class User{
         return email
     }
     
-    public func setStatus(status : String){
+    public func setStatus(status: String){
         self.status = status
     }
     
@@ -112,7 +112,7 @@ class User{
         return status
     }
     
-    public func setFaculty(isFaculty : Bool){
+    public func setFaculty(isFaculty: Bool){
         self.isFaculty = isFaculty
     }
     
