@@ -22,6 +22,8 @@ class User{
     var facultyList : [String] = ["vmetcalf@trinitypawling.org",
                                   "jwang@trinitypawling.org"]
     
+    static var userList : [User] = []
+    
     public func logout(){
         self.status = "Inactive"
     }

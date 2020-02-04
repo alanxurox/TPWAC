@@ -25,7 +25,9 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
         // Do any additional setup after loading the view.
-        
+        if (currentUser.getStatus() == "Active"){
+            performSegue(withIdentifier: "toMainScreen", sender: nil)
+        }
     }
 
 
@@ -46,12 +48,27 @@ class ViewController: UIViewController {
             "Given Name": currentUser.getGivenName(),
             "Family Name": currentUser.getFamilyName(),
             "Status": currentUser.getStatus()])
+        if (currentUser.getStatus() == "Active"){
+            performSegue(withIdentifier: "toMainScreen", sender: nil)
+        }else{
+            condition.text = "Please log in first"
+        }
     }
     
-    @IBAction func disconnect(_ sender: UIButton) {
-        GIDSignIn.sharedInstance()?.disconnect()
-        GIDSignIn.sharedInstance()?.signOut()
-    }
+    @IBOutlet weak var condition: UILabel!
+    
+    /*func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+      if let error = error {
+        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+          print("The user has not signed in before or they have since signed out.")
+        } else {
+          print("\(error.localizedDescription)")
+        }
+        return
+      }
+        condition.text = "Logged in!"
+    }*/
 }
 
 //TEST!
