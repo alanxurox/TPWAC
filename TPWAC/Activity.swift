@@ -153,4 +153,24 @@ class Activity{
     public func getAltFaculty() -> String{
         return altFaculty
     }
+    //not finished to string method
+    //public func toString() -> String{
+        //return name + getDateString() + leadFaculty
+        
+        
+        /*name : String
+        var date : Date
+        var maxStudent : Int
+        var leadFaculty : String
+        var currentStudents : [String]
+        var headStudent : String
+        var altFaculty : String
+        
+        */
+        
+        
+        
+    //}
+    
+    
 }
