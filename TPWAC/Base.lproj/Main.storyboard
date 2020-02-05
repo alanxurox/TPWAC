@@ -186,7 +186,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Student leader" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-OF-hW7">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Head Faculty" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-OF-hW7">
                                                     <rect key="frame" x="0.0" y="5" width="193" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -247,14 +247,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.82926289269999998" green="0.95308183359999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ObL-eL-nnT"/>
-                        <connections>
-                            <outlet property="altFaculty" destination="dwV-ba-uiD" id="IiD-9E-GfV"/>
-                            <outlet property="headStudent" destination="8gm-OF-hW7" id="L1C-I8-g88"/>
-                            <outlet property="maxStudent" destination="2u3-Fz-27D" id="63K-yU-1Je"/>
-                            <outlet property="name" destination="IsH-IP-Mxy" id="mBQ-ZQ-caE"/>
-                            <outlet property="place" destination="mlD-ZJ-0kq" id="EXv-WJ-Faf"/>
-                            <outlet property="time" destination="FXH-hW-GLo" id="wp3-hg-MI3"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Create a new Activities" id="u4W-KM-vBE"/>
                 </viewController>

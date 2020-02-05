@@ -10,13 +10,7 @@ import UIKit
 
 class createActivities: UIView {
 
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var date: UITextField!
-    @IBOutlet weak var place: UITextField!
-    @IBOutlet weak var maxStudent: UITextField!
-    @IBOutlet weak var headStudent: UITextField!
-    @IBOutlet weak var altFaculty: UITableViewCell!
-    
+
     @IBAction func create(_ sender: UIButton) {
         
     }
