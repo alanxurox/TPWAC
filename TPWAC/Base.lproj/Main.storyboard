@@ -191,6 +191,7 @@
                                         </state>
                                         <connections>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="WNf-Dc-E8h"/>
+                                            <segue destination="4fc-5h-D1n" kind="show" id="QQE-M5-8wz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -211,15 +212,15 @@
                                     <constraint firstItem="8yl-GO-WIU" firstAttribute="leading" secondItem="cPw-Hd-7Vb" secondAttribute="leading" constant="20" symbolic="YES" id="xw2-XE-zz8"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, Teacher! Here are your activities!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-Q4-ep7">
-                                <rect key="frame" x="57" y="481" width="300" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello, usertemp! Here are your activities!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4T-Q4-ep7">
+                                <rect key="frame" x="51" y="505" width="312" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-pA-G5R">
-                                <rect key="frame" x="116" y="510" width="183" height="30"/>
+                                <rect key="frame" x="116" y="534" width="183" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Link With Google Calendar"/>
                             </button>
@@ -276,6 +277,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smR-es-pQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="730" y="392"/>
+        </scene>
+        <!--Check InUI View Controller-->
+        <scene sceneID="AUk-t4-WNW">
+            <objects>
+                <viewController id="4fc-5h-D1n" customClass="CheckInUIViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lmH-Te-unF" customClass="CheckInViewController" customModule="TPWAC" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6w-cY-oIM">
+                                <rect key="frame" x="128" y="433" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check-in with students"/>
+                                <connections>
+                                    <action selector="onClickStudents:" destination="lmH-Te-unF" eventType="touchUpInside" id="wRd-L9-YaV"/>
+                                    <action selector="sendEmailStudents:" destination="lmH-Te-unF" eventType="touchUpInside" id="tFr-Ig-7Rq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raz-cr-8LS">
+                                <rect key="frame" x="109" y="471" width="197" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Check-in with administrators"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87285208700000005" green="0.95807427170000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="yce-aE-66H"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7H0-p4-3Lz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FS6-1A-Rpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-629" y="392"/>
         </scene>
         <!--Students In My Activities-->
         <scene sceneID="ovy-ob-qzQ">

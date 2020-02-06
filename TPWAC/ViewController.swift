@@ -9,10 +9,11 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import MessageUI
 
 var ref : DatabaseReference = Database.database().reference()
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     
     override func viewDidLoad() {
