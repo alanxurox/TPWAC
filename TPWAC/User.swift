@@ -20,7 +20,7 @@ class User{
     var isFaculty : Bool
     
     var facultyList : [String] = ["vmetcalf@trinitypawling.org",
-                                  "jwang@trinitypawling.org"]
+                                  "jwang@trinitypawling.org","tyu@trinitypawling.org"]
     
     static var userList : [User] = []
     
