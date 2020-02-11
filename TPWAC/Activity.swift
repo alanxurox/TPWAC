@@ -18,6 +18,8 @@ class Activity{
     var headStudent : String
     var altFaculty : String
     
+    static var activityList : [Activity] = []
+    
     init(){
         name = "null"
         date = Date()
@@ -64,7 +66,6 @@ class Activity{
     public func isActivityAvailable() -> Bool{
         return (maxStudent > currentStudents.count)
     }
-    
     
     /**
         Returns 1 if successfully added, 2 if there's no available space, 3 if the student already signed.
@@ -153,4 +154,24 @@ class Activity{
     public func getAltFaculty() -> String{
         return altFaculty
     }
+    //not finished to string method
+    //public func toString() -> String{
+        //return name + getDateString() + leadFaculty
+        
+        
+        /*name : String
+        var date : Date
+        var maxStudent : Int
+        var leadFaculty : String
+        var currentStudents : [String]
+        var headStudent : String
+        var altFaculty : String
+        
+        */
+        
+        
+        
+    //}
+    
+    
 }

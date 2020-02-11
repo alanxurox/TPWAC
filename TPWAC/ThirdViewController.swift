@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
+
 //Class that handles the teacher view
-class ThirdViewController: UIView {
+class ThirdViewController: UIView{
     //outlet collection that holds all of the drop-down buttons
     @IBOutlet weak var helloMessage: UILabel!
     @IBOutlet var selection: [UIButton]!
@@ -26,9 +29,6 @@ class ThirdViewController: UIView {
         }
       //d
     
-    
-    
-    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -38,6 +38,12 @@ class ThirdViewController: UIView {
             helloMessage.text = "Hello Student"
         }
         // Drawing code
+    }
+    
+    @IBAction func disconnect(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.disconnect()
+        GIDSignIn.sharedInstance()?.signOut()
+        currentUser = User()
     }
     
     @IBAction func onClick(_ sender: UIButton) {
