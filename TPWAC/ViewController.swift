@@ -14,7 +14,6 @@ var ref : DatabaseReference = Database.database().reference()
 
 class ViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
