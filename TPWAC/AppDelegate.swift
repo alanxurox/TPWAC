@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         currentUser.setEmail(email: user.profile.email)
         currentUser.setStatus(status: "Active")
         currentUser.checkFaculty()
-        //currentUser.setFaculty(isFaculty: false) // TBD
+        
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
