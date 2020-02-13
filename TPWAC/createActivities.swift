@@ -11,14 +11,23 @@ import UIKit
 class createActivities: UIView {
 
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var date: UITextField!
+    @IBOutlet weak var date: UITextField! //Why not a DatePicker?
     @IBOutlet weak var place: UITextField!
     @IBOutlet weak var maxStudent: UITextField!
     @IBOutlet weak var headFaculty: UITextField!
     @IBOutlet weak var altFaculty: UITextField!
     
     @IBAction func create(_ sender: UIButton) {
+        var newActivity : Activity = Activity()
+        newActivity.setName(name: name.text!)
         
+        newActivity.setLocation(location: place.text!)
+        newActivity.setMaxStudent(maxStudent: Int(maxStudent.text!)!)
+        newActivity.setLeadFaculty(leadFaculty: headFaculty.text!)
+        newActivity.setAltFaculty(altFaculty: altFaculty.text!)
+        //newActivity.setDate(date: <#T##Date#>)
+        //date.text = newActivity.getDateString()
+        Activity.activityList.append(newActivity)
     }
   
     /*

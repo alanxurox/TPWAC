@@ -12,6 +12,8 @@ class Activity{
     
     var name : String
     var date : Date
+    var due : Date
+    var location : String
     var maxStudent : Int
     var leadFaculty : String
     var currentStudents : [String]
@@ -23,6 +25,8 @@ class Activity{
     init(){
         name = "null"
         date = Date()
+        due = Date()
+        location = "Your home"
         maxStudent = 5
         leadFaculty = "vmetcalf@trinitypawling.org"
         currentStudents = ["jwang@trinitypawling.org", "tliu@trinitypawling.org"]
@@ -30,9 +34,11 @@ class Activity{
         headStudent = ""
     }
     
-    init(name: String, date: Date, maxStudent: Int, leadFaculty: String, currentStudents: [String], headStudent: String = "", altFaculty: String = ""){
+    init(name: String, date: Date, due: Date, location: String, maxStudent: Int, leadFaculty: String, currentStudents: [String], headStudent: String = "", altFaculty: String = ""){
         self.name = name
         self.date = date
+        self.due = due
+        self.location = location
         self.maxStudent = maxStudent
         self.leadFaculty = leadFaculty
         self.currentStudents = currentStudents
@@ -115,6 +121,22 @@ class Activity{
         return date
     }
     
+    public func setDue(year: Int, month: Int, day: Int, hour: Int, minute: Int){
+        self.due = toDate(year: year, month: month, day: day, hour: hour, minute: minute)
+    }
+    
+    public func getDue() -> Date{
+        return due
+    }
+    
+    public func setLocation(location: String){
+        self.location = location
+    }
+    
+    public func getLocation() -> String{
+        return location
+    }
+    
     public func setMaxStudent(maxStudent: Int){
         self.maxStudent = maxStudent
     }
@@ -154,6 +176,9 @@ class Activity{
     public func getAltFaculty() -> String{
         return altFaculty
     }
+    
+    
+    
     //not finished to string method
     //public func toString() -> String{
         //return name + getDateString() + leadFaculty
