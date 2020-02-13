@@ -10,7 +10,7 @@ import UIKit
 //email message import
 import MessageUI
 
-class CheckInViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class CheckInViewController: UIView, MFMailComposeViewControllerDelegate {
     //onclick method that sends an email to the students in your selected activity
     
     /*override func draw(_ rect: CGRect) {
@@ -20,7 +20,7 @@ class CheckInViewController: UIViewController, MFMailComposeViewControllerDelega
     @IBAction func sendEmailStudents(_ sender: Any) {
         let mailComposeViewController = configureMailController()
         if MFMailComposeViewController.canSendMail(){
-            self.present(mailComposeViewController, animated: true, completion: nil)
+            //self.present(mailComposeViewController, animated: true, completion: nil)
         } else {
             showMailError()
         }
@@ -42,7 +42,7 @@ class CheckInViewController: UIViewController, MFMailComposeViewControllerDelega
         let dismiss = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         sendMailErrorAlert.addAction(dismiss)
-        self.present(sendMailErrorAlert, animated: true, completion: nil)
+        //self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

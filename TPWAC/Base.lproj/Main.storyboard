@@ -33,7 +33,7 @@
                                 <state key="normal" title="Log-in"/>
                                 <connections>
                                     <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qC7-jl-Rp0"/>
-                                    <segue destination="fWN-jh-0SW" kind="show" id="A5W-c6-1cQ"/>
+                                    <segue destination="fWN-jh-0SW" kind="show" id="m9I-OY-EYP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCM-hV-K2r">
@@ -52,7 +52,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="-267"/>
+            <point key="canvasLocation" x="66.666666666666671" y="-267.1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Z2L-d9-H74">
@@ -86,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="729" y="1053"/>
         </scene>
-        <!--Teacher View Controller-->
+        <!--View Controller Home-->
         <scene sceneID="kB8-fT-b5j">
             <objects>
-                <viewController id="fWN-jh-0SW" customClass="TeacherViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0hO-N6-Exv" customClass="ThirdViewController" customModule="TPWAC" customModuleProvider="target">
+                <viewController id="fWN-jh-0SW" customClass="ViewControllerHome" customModule="TPWAC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hO-N6-Exv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -108,6 +108,7 @@
                                             <color key="titleColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="handleSelect:" destination="fWN-jh-0SW" eventType="touchUpInside" id="nmy-d0-flr"/>
                                             <action selector="handleSelect:" destination="0hO-N6-Exv" eventType="touchUpInside" id="qPS-gY-aPs"/>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="d7E-Tu-bFA"/>
                                         </connections>
@@ -123,7 +124,6 @@
                                         </state>
                                         <connections>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="DfX-LN-TlV"/>
-                                            <segue destination="ShO-Cg-Ngu" kind="show" id="mXR-2K-0Dk"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yl-GO-WIU">
@@ -150,7 +150,6 @@
                                         </state>
                                         <connections>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="XjQ-Rb-PeJ"/>
-                                            <segue destination="Rvb-eb-uka" kind="show" id="89X-7L-gwz"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHQ-I1-M3b">
@@ -164,7 +163,6 @@
                                         </state>
                                         <connections>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="CUH-gE-iWl"/>
-                                            <segue destination="vCu-Cd-IyH" kind="show" id="Zam-ko-SSX"/>
                                         </connections>
                                     </button>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3C-dX-zQV">
@@ -191,7 +189,6 @@
                                         </state>
                                         <connections>
                                             <action selector="onClick:" destination="0hO-N6-Exv" eventType="touchUpInside" id="WNf-Dc-E8h"/>
-                                            <segue destination="4fc-5h-D1n" kind="show" id="QQE-M5-8wz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -243,6 +240,16 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Irn-L2-i1G"/>
+                    <connections>
+                        <outlet property="helloMessage" destination="T4T-Q4-ep7" id="2R2-Yi-sA4"/>
+                        <outletCollection property="selection" destination="gKw-D0-ZaS" collectionClass="NSMutableArray" id="tbA-6k-eLQ"/>
+                        <outletCollection property="selection" destination="gKw-D0-ZaS" collectionClass="NSMutableArray" id="TB1-gF-Azg"/>
+                        <outletCollection property="selection" destination="8yl-GO-WIU" collectionClass="NSMutableArray" id="cga-9F-Hwd"/>
+                        <outletCollection property="selection" destination="bFl-No-1VJ" collectionClass="NSMutableArray" id="2W3-fZ-hi3"/>
+                        <outletCollection property="selection" destination="yHQ-I1-M3b" collectionClass="NSMutableArray" id="Yk6-Tt-Mrp"/>
+                        <outletCollection property="selection" destination="y3C-dX-zQV" collectionClass="NSMutableArray" id="qvU-UU-6aV"/>
+                        <outletCollection property="selection" destination="SzA-YL-5nK" collectionClass="NSMutableArray" id="Bp7-2f-XNC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NWN-EN-RlZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
