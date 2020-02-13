@@ -11,7 +11,7 @@ import UIKit
 class createActivities: UIView {
 
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var date: UITextField! //Why not a DatePicker?
+    @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var place: UITextField!
     @IBOutlet weak var maxStudent: UITextField!
     @IBOutlet weak var headFaculty: UITextField!
@@ -25,8 +25,7 @@ class createActivities: UIView {
         newActivity.setMaxStudent(maxStudent: Int(maxStudent.text!)!)
         newActivity.setLeadFaculty(leadFaculty: headFaculty.text!)
         newActivity.setAltFaculty(altFaculty: altFaculty.text!)
-        //newActivity.setDate(date: <#T##Date#>)
-        //date.text = newActivity.getDateString()
+        newActivity.setDate(date: date.date)
         Activity.activityList.append(newActivity)
     }
   
