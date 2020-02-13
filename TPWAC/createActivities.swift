@@ -20,6 +20,14 @@ class createActivities: UIView {
     @IBOutlet var textfields: [UITextField]!
     
     @IBAction func create(_ sender: UIButton) {
+        
+        
+        for a in textfields{
+            if (a.text! == ""){
+                return
+            }
+        }
+        
         let newActivity : Activity = Activity()
         newActivity.setName(name: name.text!)
         
