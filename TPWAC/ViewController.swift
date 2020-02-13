@@ -15,7 +15,6 @@ var ref : DatabaseReference = Database.database().reference()
 
 class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
