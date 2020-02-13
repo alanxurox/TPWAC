@@ -27,6 +27,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
             "date": activity.getDateString(),
             "maxStudent": activity.getMaxStudent(),
             "leadFaculty": activity.getLeadFaculty(),
+            "location": newActivity.getLocation(),
             "currentStudents": activity.getCurrentStudents(),
             "headStudent": activity.getHeadStudent(),
             "altFaculty": activity.getAltFaculty()])
