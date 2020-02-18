@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mob-JO-tTb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mob-JO-tTb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -184,6 +184,12 @@
                             <outlet property="maxStudent" destination="2u3-Fz-27D" id="eHb-2L-3oc"/>
                             <outlet property="name" destination="IsH-IP-Mxy" id="fSf-ZM-esQ"/>
                             <outlet property="place" destination="mlD-ZJ-0kq" id="rRx-Wn-8Ut"/>
+                            <outletCollection property="textfields" destination="IsH-IP-Mxy" collectionClass="NSMutableArray" id="MFQ-DN-ZJa"/>
+                            <outletCollection property="textfields" destination="FXH-hW-GLo" collectionClass="NSMutableArray" id="mRr-bb-ZDQ"/>
+                            <outletCollection property="textfields" destination="mlD-ZJ-0kq" collectionClass="NSMutableArray" id="H0o-r4-ngW"/>
+                            <outletCollection property="textfields" destination="2u3-Fz-27D" collectionClass="NSMutableArray" id="TYk-qV-DmC"/>
+                            <outletCollection property="textfields" destination="ZqX-kj-vdk" collectionClass="NSMutableArray" id="9Bd-QA-Z5L"/>
+                            <outletCollection property="textfields" destination="pud-2Q-7Kb" collectionClass="NSMutableArray" id="Ctk-0h-efJ"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Create a new Activities" id="u4W-KM-vBE"/>
